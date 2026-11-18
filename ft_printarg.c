@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_hexatoa.c                                       :+:      :+:    :+:   */
+/*   ft_printarg.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmaatouk <mmaatouk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/17 20:15:30 by mmaatouk          #+#    #+#             */
-/*   Updated: 2026/11/17 20:16:44 by mmaatouk         ###   ########.fr       */
+/*   Created: 2026/11/18 14:48:04 by mmaatouk          #+#    #+#             */
+/*   Updated: 2026/11/18 19:57:47 by mmaatouk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_hexatoa(char *s)
-{
-	char *hexa;
+#include "ft_printf.h"
+#include <stdarg.h>
 
-	*s = "123456789abcdef";
+void	ft_printarg(format *ptr, va_list arg)
+{
+
 }

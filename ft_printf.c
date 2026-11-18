@@ -6,7 +6,7 @@
 /*   By: mmaatouk <mmaatouk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/17 14:44:13 by mmaatouk          #+#    #+#             */
-/*   Updated: 2026/11/17 20:27:06 by mmaatouk         ###   ########.fr       */
+/*   Updated: 2026/11/18 19:35:10 by mmaatouk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,22 +29,24 @@ int	conversion(const char *s,int *index)
 	return (0);
 }
 
-int	ft_printf(const char *format, ...)
+int	ft_printf(const char *str, ...)
 {
 	va_list	args;
+	format	*ptr;
 	int	i;
-
+	
 	i = 0;
-	va_start(args,format);
-	while(format[i])
+	va_start(args,str);
+	while(str[i])
 	{
-		if(format[i] != '%')
-			ft_putchar_fd(format[i],1);
+		if(str[i] != '%')
+			ft_putchar_fd(str[i++],1);
 		else
 		{
-			if(!conversion(format,&i))
+			if(!conversion(str,&i))
 				continue ;
-
+			ptr = ft_parser(str,&i);
+			free(ptr);
 		}
 	}
 

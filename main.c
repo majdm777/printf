@@ -2,6 +2,7 @@
 
 int main()
 {
-	printf("% d",123);
+	int i= 12;
+	printf("|%12.0d|",0);
 }
 

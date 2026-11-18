@@ -1,13 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   handle_printation.c                                :+:      :+:    :+:   */
+/*   ft_nbrlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmaatouk <mmaatouk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/17 19:53:54 by mmaatouk          #+#    #+#             */
-/*   Updated: 2026/11/17 20:00:17 by mmaatouk         ###   ########.fr       */
+/*   Created: 2026/11/18 20:02:52 by mmaatouk          #+#    #+#             */
+/*   Updated: 2026/11/18 20:03:49 by mmaatouk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	handleprintation(int flags, int width, int pre, char * str)
+int	ft_nbrlen(int nbr)
+{
+	int size;
+
+	size =0;
+	if(nbr == 0)
+		return (1);
+	while(nbr)
+	{
+		nbr /= 10;
+		size++;
+	}
+	return (size);
+}
